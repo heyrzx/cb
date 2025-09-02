@@ -137,6 +137,8 @@ class Bot(Client):
                     temp.CURRENT = current
                     await index_files_to_db(self, msg, chat_to_index, int(OWNER_ID), db_type, int(last_id))
 
+            await asyncio.sleep(86400) 
+            os.execl(sys.executable, sys.executable, "bot.py")
             logger.info("Bot startup complete.")
 
         except Exception as e:
