@@ -24,7 +24,7 @@ from utils import get_size, temp, is_requested_one, is_requested_two, add_auto_d
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-DELETE_TXT = "🗑️ _This message and the file will be deleted in {} seconds._".format(AUTO_DEL)
+DELETE_TXT = "📁 𝗪𝗮𝗿𝗻𝗶𝗻𝗴 ⚠️\n\n<blockquote>Please note that this movie file will be deleted in 5 minutes to avoid Copyright. To keep it, forward it to a friend or save it to your personal space.</blockquote>\n\n📁 അറിയിപ്പ് ⚠️\n\n<blockquote>അയച്ച ഫയലുകൾ കോപ്പി റൈറ്റ് ഒഴിവാക്കാൻ വേണ്ടി 5 മിനിറ്റിനു ശേഷം ഡിലീറ്റ് ചെയ്യുന്നതാണ്. അതുകൊണ്ട് ഫയൽ സേവ്ഡ് മെസ്സേജ്സിലേക്ക് മാറ്റേണ്ടതാണ്.</blockquote>"
 GLOBAL_FILTER_CACHE = {}
 CACHE_TTL = timedelta(minutes=5)
 
