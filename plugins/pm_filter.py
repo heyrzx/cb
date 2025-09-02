@@ -325,7 +325,7 @@ async def auto_filter(client, message):
     caption = f"𝙃𝙚𝙧𝙚 𝙞𝙨 𝙬𝙝𝙖𝙩 𝙞 𝙛𝙤𝙪𝙣𝙙 𝙛𝙤𝙧 𝙮𝙤𝙪𝙧 𝙦𝙪𝙚𝙧𝙮\n🎬 **Name**: {search}\n📚 **Page**: 1"
     sent_message = await message.reply_text(caption, reply_markup=InlineKeyboardMarkup(buttons), quote=True, parse_mode=enums.ParseMode.MARKDOWN)
     SEARCH_CACHE.set(search_key, search)
-    await add_auto_delete_message(sent_message.id, sent_message.chat.id, AUTO_DEL)
+    #await add_auto_delete_message(sent_message.id, sent_message.chat.id, AUTO_DEL)
 
 async def pm_auto_filter(client, message):
     search = message.text
@@ -346,7 +346,7 @@ async def pm_auto_filter(client, message):
     caption = f"𝙃𝙚𝙧𝙚 𝙞𝙨 𝙬𝙝𝙖𝙩 𝙞 𝙛𝙤𝙪𝙣𝙙 𝙛𝙤𝙧 𝙮𝙤𝙪𝙧 𝙦𝙪𝙚𝙧𝙮\n\n🎬 **Name**: {search}\n📚 **Page**: 1"
     sent_message = await message.reply_text(caption, reply_markup=InlineKeyboardMarkup(buttons), quote=True, parse_mode=enums.ParseMode.MARKDOWN)
     SEARCH_CACHE.set(search_key, search)
-    schedule_message_deletion(client, sent_message, delay_seconds=AUTO_DEL)
+    #schedule_message_deletion(client, sent_message, delay_seconds=AUTO_DEL)
     
 async def global_filters(client, message):
     """Optimized global filter check using a cached regex pattern."""
